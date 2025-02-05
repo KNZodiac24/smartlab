@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5; /* Fondo general */
+}
+
+.bg-secundario {
+    background-color: #6a1b9a; /* Cabecera morada */
+    color: white;
+}
+
+.titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    color: #501374;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.boton-morado {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-morado:hover {
+    background-color: #501374;
+}
+
+.estrella {
+    font-size: 1.5em;
+    color: #c0c0c0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.estrella.morada {
+    color: #6a1b9a; /* Estrella pintada */
+}
+
+.estrella:hover {
+    transform: scale(1.2); /* Efecto hover */
+}
+
+main {
+    margin-bottom: 2rem; /* Espaciado inferior adicional */
+}

@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff;
+    margin: 0;
+}
+
+.bg-morado {
+    background-color: #afbafb;
+    background-size: 200% 200%;
+    animation: gradientMove 8s infinite linear;
+}
+
+/* Título */
+.titulo {
+    color: #6a1b9a;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+/* Estilo de inputs */
+.form-control {
+    border-radius: 8px;
+    font-size: 1.1em;
+    padding: 15px;
+    padding-right: 40px;
+}
+
+/* Ícono de mostrar contraseña */
+.toggle-password {
+    cursor: pointer;
+}
+
+/* Botón de registro */
+.boton-morado {
+    background-color: #6a1b9a;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-morado:hover {
+    background-color: #501374;
+}
+
+/* Enlace de inicio de sesión */
+.link-morado {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link-morado:hover {
+    text-decoration: underline;
+}
+
+/* Fondo animado */
+@keyframes gradientMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}

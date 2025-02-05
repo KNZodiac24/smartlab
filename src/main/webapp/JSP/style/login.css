@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5e6ff;
+    margin: 0;
+}
+
+/* Estilo del formulario */
+.credenciales {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.titulo {
+    font-size: 2.5em;
+    color: #6a1b9a; /* Color morado específico */
+    font-weight: bold;
+}
+
+/* Botones */
+.boton-morado {
+    background-color: #6a1b9a !important; /* Color morado */
+    color: #ffffff !important;
+    border: 2px solid transparent;
+    box-sizing: border-box; /* Evitar cambios de tamaño */
+}
+
+.boton-morado:hover {
+    background-color: #501374 !important; /* Tonalidad más oscura */
+    border-color: #ffffff !important;
+}
+
+.boton-gris {
+    background-color: #e0e0e0 !important;
+    color: #333 !important;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+.boton-gris:hover {
+    background-color: #c0c0c0 !important;
+    border-color: #6a1b9a !important; /* Mostrar borde */
+}
+
+/* Fondo animado */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a1b9a 25%, #b3d8ff 25%, #b3d8ff 50%, #6a1b9a 50%, #6a1b9a 75%, #b3d8ff 75%);
+    background-size: 300% 300%;
+    animation: gradientMove 8s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 70% 70%;
+    }
+}
