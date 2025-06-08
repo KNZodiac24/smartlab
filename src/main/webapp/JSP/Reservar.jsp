@@ -32,7 +32,7 @@
             <!-- InformaciÃ³n del Elemento -->
             <div class="col-lg-4">
                 <div class="info-elemento">
-                    <h5>Elemento:</h5>
+                    <h5>Implemento:</h5>
                     <input type="text" class="form-control mb-3" id="elemento" value="${elemento.nombreElemento}" disabled>
                     <h5>Descripción:</h5>
                     <textarea class="form-control" id="descripcion" rows="6" style="resize: none;" disabled>${elemento.descripcion}</textarea>

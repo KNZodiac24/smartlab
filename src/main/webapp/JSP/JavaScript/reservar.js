@@ -16,10 +16,17 @@ listaDeHoras.forEach((li) => {
         	
     if(li.classList.contains("reservado")){
     	li.addEventListener("click", () => {
+			alert("El implemento ya se encuentra reservado en este horario.");
     		document.querySelectorAll("#lista-horas li").forEach((item) => item.classList.remove("seleccionada"));
 			btnReservar.style.display = "none";
 	        horaSeleccionada = 0;
 	        fechaSeleccionada = fechaInput.value;
 	  	});
+	}
+});
+
+btnReservar.addEventListener("click", ()=>{
+	if(fechaSeleccionada != null && horaSeleccionada != null){
+		alert("Reserva realizada con éxito.");
 	}
 });

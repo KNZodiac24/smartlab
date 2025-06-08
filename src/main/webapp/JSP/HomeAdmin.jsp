@@ -41,14 +41,13 @@
 				<div
 					class="row mb-3 d-flex justify-content-between align-items-center">
 					<div class="col-auto">
-						<h2 class="subtitulo">Lista de Elementos</h2>
+						<h2 class="subtitulo">Lista de Implementos</h2>
 					</div>
 					<div class="col-auto">
 						<button class="btn btn-primary boton-morado" id="btn-agregar" 
 						        onclick="location.href='GestionController?ruta=solicitarAgregar'">+ Agregar</button>
 					</div>
 				</div>
-				<p class="text-muted">elementos encontrados</p>
 
 				<table class="table table-hover table-striped">
 					<thead class="table-light">
@@ -69,10 +68,10 @@
 								<td class="d-flex gap-2">
 									<!-- Enlace para Eliminar, con más parámetros --> <a
 									href="GestionController?ruta=solicitarEliminar&idElemento=${elemento.idElemento}"
-									class="btn btn-danger"> Eliminar </a> <!-- Enlace para Editar, con más parámetros -->
+									class="boton-eliminar btn btn-danger"> Eliminar </a> <!-- Enlace para Editar, con más parámetros -->
 									<a
 									href="GestionController?ruta=solicitarEdicion&idElemento=${elemento.idElemento}"
-									class="btn btn-secondary"> Editar </a>
+									class="btn btn-secondary"> Actualizar</a>
 								</td>
 							</tr>
 						</c:forEach>
@@ -81,7 +80,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="JavaScript/homeAdmin.js"></script>
+	<script src="JSP/JavaScript/homeAdmin.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -45,7 +45,7 @@
                 <table class="table table-hover mt-3">
                     <thead class="table-light">
                         <tr>
-                            <th>Elemento</th>
+                            <th>Implemento</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
                         </tr>
@@ -58,7 +58,7 @@
 	                            <td>${elemento.descripcion}</td>
 	                            <td class="d-flex align-items-center gap-3">
 	                                <button class="btn btn-primary boton-morado verificar-btn" onclick="location.href='ReservaController?ruta=verificarDisponibilidad&idElemento=${elemento.idElemento}'">Verificar Disponibilidad</button>
-	                                <button class="btn btn-primary boton-morado verificar-btn" onclick="location.href='FavoritoController?ruta=eliminarFavorito&idElemento=${elemento.idElemento}'">Eliminar Favorito</button>
+	                                <button class="boton-eliminar-favoritos btn btn-primary boton-morado verificar-btn" onclick="location.href='FavoritoController?ruta=eliminarFavorito&idElemento=${elemento.idElemento}'">Eliminar Favorito</button>
 	                            </td>
 
 	                        </tr>
@@ -72,7 +72,7 @@
                 <table class="table table-hover mt-3">
                     <thead class="table-light">
                         <tr>
-                            <th>Elemento</th>
+                            <th>Implemento</th>
                             <th>Descripción</th>
                             <th>Fecha</th>
                             <th>Hora</th>
@@ -95,12 +95,16 @@
             <!-- Reservar Ahora -->
             <section class="shadow p-4 mb-5 bg-white rounded">
                 <h2 class="subtitulo">Reserva ahora</h2>
+                <input id="buscadorElementos" type="text" placeholder="Ingresa el nombre de un implemento a buscar" class="rounded" style="width: 100%; padding: 5px;">
+                <br><br>
                 <p class="fw-bold">Disponibles:</p>
-                              
-                <table class="table table-hover">
+                
+                <p id="mensaje-vacio" style="font-weight: bold; color: orange;"></p>
+                
+                <table id="tablaAllElements" class="table table-hover">
                     <thead class="table-light">
                         <tr>
-                            <th>Elemento</th>
+                            <th>Implemento</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
                         </tr>
@@ -118,7 +122,7 @@
 <!--                                 			<button class="btn btn-primary boton-morado verificar-btn" disabled>Agregar Favorito</button> -->
                                 		</c:when >
                                 		<c:otherwise >
-                                			<button class="btn btn-primary boton-morado verificar-btn" onclick="location.href='FavoritoController?ruta=agregarFavorito&idElemento=${elemento.idElemento}'">Agregar Favorito</button>
+                                			<button class="boton-favoritos btn btn-primary boton-morado verificar-btn" onclick="location.href='FavoritoController?ruta=agregarFavorito&idElemento=${elemento.idElemento}'">Agregar Favorito</button>
                                 		</c:otherwise>
                                 	</c:choose>
 	                            </td>
@@ -135,7 +139,7 @@
     <div class="bg-primario py-4"></div>
     <!-- FontAwesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="JavaScript/homeUser.js"></script>
+    <script src="JSP/JavaScript/homeUser.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
